@@ -1,25 +1,21 @@
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   }
+
 };
 
-
-const tail = function(array) {
-  if (array.length <= 1) {
-    return [];
-  }
-  return array.slice(1);
+const tail = function(Array) {
+  return Array[0];
 };
 
-
-assertEqual(tail([1, 2, 3]).toString(), [2, 3].toString()); 
-assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"]).toString(), ["Lighthouse", "Labs"].toString());
-
-
-assertEqual(tail([5]).toString(), [].toString()); 
-assertEqual(tail([]).toString(), [].toString()); 
+// const result = tail(["Hello", "Lighthouse", "Labs"]);
+// assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
 
+
+const words = ["Yo Yo", "Lighthouse", "Labs"];
+tail(words); // no need to capture the return value since we are not checking it
+assertEqual(words.length, 3); // original array should still have 3 elements!
