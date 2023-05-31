@@ -7,33 +7,55 @@ const assertEqual = function(actual, expected) {
 
 };
 
+const eqArrays = function(arrayOne, arrayTwo) {
+  if (arrayOne.length !== arrayTwo.length) {
+    return false;
+  } else {
+    for (let i = 0; i < arrayOne.length; i++) {
+      if (arrayOne[i] !== arrayTwo[i]) {
+        return false;
+      }
 
-
-const eqArrays = require('./eqArrays');
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-const eqObjects = function(object1, object2) {
-  // requirement is they have the same number of keys and key-value pairs are the same (order doesn't matter)
-  
-  const keys1 = Object.keys(object1);
-  const keys2 = Object.keys(object2);
-  
-  if (keys1.length !== keys2.length) return false;
-  
-  for (let key of keys1) {
-    const item1 = object1[key]; // remember this is accessing the notation... object[key] => key resolves to the property/key
-    const item2 = object2[key];
-    
-    if (Array.isArray(item1) && Array.isArray(item2)) {
-      if (!(eqArrays(item1, item2))) return false;
-    }
-
-    if ((item1 !== item2) && !(Array.isArray(item1) && Array.isArray(item2))) return false;
+    } return true;
 
   }
-  return true;
 };
+
+const eqObjects = function(object1, object2) {
+
+  let objOneKeys = Object.keys(object1);
+  let objTwoKeys = Object.keys(object2);
+  let equalArrays = true;
+  if (objOneKeys.length !== objTwoKeys.length) {
+    equalArrays = false;
+  } else {
+
+    for (const key in object1) {
+
+      if (object1[key] !== object2[key]) {
+        if (Array.isArray(object1[key])) {
+          equalArrays = eqArrays(object1[key], object2[key]);
+        } else {
+          equalArrays = false;
+        }
+      } else {
+        equalArrays = true;
+      }
+
+      
+    }
+    return equalArrays;
+  }
+};
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// console.log(eqObjects(cd, dc)); // => true
+
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// console.log(eqObjects(cd, cd2)); // => false
+
+
+
 
 
 const shirtObject = { color: "red", size: "medium" };
