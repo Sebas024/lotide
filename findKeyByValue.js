@@ -9,24 +9,22 @@ const assertEqual = function(actual, expected) {
 
 
 
-const findKeyByValue = function(object, value){
+const findKeyByValue = function(object, value) {
   for (let key in object) {
-      console.log(key);
-      if (object[key].includes(value)){
-          return key;
+    console.log(key);
+    if (object[key].includes(value)) {
+      return key;
+    }
   }
-}
-
-
-
-const bestTVShowsByGenre = { 
-sci_fi: "The Expanse",
-comedy: "Brooklyn Nine-Nine",
-drama:  "The Wire"
-  };
-
 };
 
 
-findKeyByValue({name : "johnny", lmao : "lol",}, "johnny")
+const bestTVShowsByGenre = {
+  sci_fi: "The Expanse",
+  comedy: "Brooklyn Nine-Nine",
+  drama:  "The Wire"
+};
+
+
+findKeyByValue({name: "johnny", "lmao" : "lol",}, "johnny");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
