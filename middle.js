@@ -26,3 +26,6 @@ console.log(middle([5, 10, 90]));
 // assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
 // console.log("Middle of [1, 2, 3, 4, 5, 6]:");
 // assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+
+
+module.exports = middle;

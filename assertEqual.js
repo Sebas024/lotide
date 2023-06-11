@@ -20,7 +20,6 @@
 // // TEST CODE
 // console.assert(sumBuggy(1, 2) === 3); // fails, because bug!
 
-
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -28,6 +27,19 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   }
+<<<<<<< HEAD
+=======
+
+};
+
+// // TEST CODE
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
+
+
+// module.exports = assertEqual;
+
+>>>>>>> 6f1dcdca022e8c570b3adee4c61d27a819e25829
 
 };
 
@@ -36,5 +48,9 @@ assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
 
+<<<<<<< HEAD
 module.exports = assertEqual;
 
+=======
+module.exports = assertEqual;
+>>>>>>> 6f1dcdca022e8c570b3adee4c61d27a819e25829
