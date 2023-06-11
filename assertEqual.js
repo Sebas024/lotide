@@ -27,6 +27,8 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
   }
+<<<<<<< HEAD
+=======
 
 };
 
@@ -37,9 +39,18 @@ assertEqual(1, 1);
 
 // module.exports = assertEqual;
 
+>>>>>>> 6f1dcdca022e8c570b3adee4c61d27a819e25829
+
+};
+
+// TEST CODE
+assertEqual("Lighthouse Labs", "Bootcamp");
+assertEqual(1, 1);
 
 
-
-// assertEqual.js
-
+<<<<<<< HEAD
 module.exports = assertEqual;
+
+=======
+module.exports = assertEqual;
+>>>>>>> 6f1dcdca022e8c570b3adee4c61d27a819e25829

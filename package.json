@@ -2,7 +2,11 @@
   "name": "@charles024/lotide",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
+  "main": "assertArraysEquals.js",
+=======
   "main": "assertArraysEqual.js",
+>>>>>>> 6f1dcdca022e8c570b3adee4c61d27a819e25829
   "directories": {
     "test": "test"
   },
@@ -20,8 +24,13 @@
     "url": "https://github.com/Sebas024/lotide/issues"
   },
   "homepage": "https://github.com/Sebas024/lotide#readme",
+<<<<<<< HEAD
+  "dependencies": {
+    "chalk": "^4.1.2"
+=======
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^9.2.2"
+>>>>>>> 6f1dcdca022e8c570b3adee4c61d27a819e25829
   }
 }
