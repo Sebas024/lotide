@@ -26,6 +26,6 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-* `function1(...)`: description
-* `function2(...)`: description
+* `allItems(Array)`: The array of items to be counted.
+* `itemsToCount(Object)`: The object specifying the items to count and their criteria.
 * `function3(...)`: description

@@ -1,9 +1,4 @@
 const takeUntil = function(array, callback) {
-  // ...
-};
-
-
-const takeUntil = function(array, callback) {
   let final = [];
   for (const item of array) {
     if (callback(item)) {
@@ -22,3 +17,7 @@ console.log(`---`);
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 console.log(takeUntil(data2, x => x === ','));
+
+
+
+module.exports = takeUntil;

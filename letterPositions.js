@@ -1,6 +1,6 @@
 const letterPositions = function(sentence) {
   let results = {};
-  for (i = 0; i < sentence.length; i++) {
+  for (let i = 0; i < sentence.length; i++) {
     let letter = sentence[i];
     if (results[letter]) {
       results[letter].push(i);
@@ -11,4 +11,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+
 console.log(letterPositions("lighthouse in the house"));
+
+
+module.exports = letterPositions;

@@ -1,21 +1,14 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-
-};
+const assertEqual = require('./assertEqual');
 
 
 const countLetters = function(string) {
   const obj = {};
   for (const letter of string) {
 
-    if (letter !== ' ') {
-      if (obj[letter]) {
-        obj[letter] = obj[letter] + 1;
-      } else {
+    if (letter !== ' ') { // Filters the spaces in the string
+      if (obj[letter]) { // if the letter has already been counted, adds 1 to the count.
+        obj[letter] = obj[letter] += 1;
+      } else { // If the letter does not exist in the result object, creates it
         obj[letter] = 1;
       }
     }
@@ -24,4 +17,3 @@ const countLetters = function(string) {
 };
 
 console.log(countLetters("lighthouse in the house"));
-// console.log(countLetters("My name is Andrijana"));

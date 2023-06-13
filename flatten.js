@@ -1,16 +1,20 @@
 const flatten = function(array) {
-  const flattened = [];
-
-  for (let element of array) {
-    if (Array.isArray(element)) {
-      flattened.push(...flatten(element));
+  let flattenedArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      for (const element of array[i]) {
+        flattenedArray.push(element);
+      }
     } else {
-      flattened.push(element);
+      flattenedArray.push(array[i]);
     }
   }
-
-  return flattened;
+  return flattenedArray;
 };
 
 // Test case
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // Output: [1, 2, 3, 4, 5, 6]
+
+
+
+module.exports = flatten;
