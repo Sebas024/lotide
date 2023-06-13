@@ -22,5 +22,9 @@
   "homepage": "https://github.com/Sebas024/lotide#readme",
   "dependencies": {
     "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
   }
 }
