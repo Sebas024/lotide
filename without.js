@@ -17,4 +17,3 @@ const without = function(source, itemsToRemove) {
 
 module.exports = without;
 
-1
