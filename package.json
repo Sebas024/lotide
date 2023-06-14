@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/Sebas024/lotide#readme",
   "dependencies": {
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "my-package": "0.0.0"
   },
   "devDependencies": {
     "chai": "^4.3.7",
