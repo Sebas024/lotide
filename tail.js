@@ -3,3 +3,5 @@ const tail = function(Array) {
 };
 
 module.exports = tail;
+
+1
