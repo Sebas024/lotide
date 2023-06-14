@@ -25,4 +25,3 @@ const eqObjects = function(object1, object2) {
 
 
 module.exports = eqObjects;
-1
