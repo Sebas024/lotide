@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const findKey = function(obj, callback) {
   const theKeysToLookThrough = Object.keys(obj);
   for (let key of theKeysToLookThrough) {
@@ -12,24 +10,6 @@ const findKey = function(obj, callback) {
     }
   }
 };
-
-
-
-
-
-findKey(
-  {
-    "Blue Hill": { stars: 1 },
-    Akaleri: { stars: 3 },
-    noma: { stars: 2 },
-    elBulli: { stars: 3 },
-    Ora: { stars: 2 },
-    Akelarre: { stars: 3 },
-  },
-  function(x) {
-    return x.stars === 2;
-  }
-);
 
 
 

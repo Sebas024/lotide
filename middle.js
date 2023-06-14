@@ -1,4 +1,8 @@
 const middle = function(array) {
+  //need to know array.length
+  //if array has =< 2 elements, return an empty array
+  //if (odd) array %2 !== 0, return a single middle element
+  //if (even) array %2 === 0; return the 2 middle elements
   const length = array.length;
   const middleIndex = Math.floor(length / 2);
 
@@ -10,9 +14,5 @@ const middle = function(array) {
     return [array[middleIndex - 1], array[middleIndex]];
   }
 };
-
-
-
-console.log(middle([5, 10, 90]));
 
 module.exports = middle;

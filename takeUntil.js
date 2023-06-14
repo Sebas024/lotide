@@ -1,4 +1,5 @@
 const takeUntil = function(array, callback) {
+  //function takeUntil returns a slice of the array with elements taken from the beginning
   let final = [];
   for (const item of array) {
     if (callback(item)) {
@@ -9,15 +10,6 @@ const takeUntil = function(array, callback) {
   }
   return final;
 };
-
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-console.log(takeUntil(data1, x => x < 0));
-
-console.log(`---`);
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-console.log(takeUntil(data2, x => x === ','));
-
 
 
 module.exports = takeUntil;

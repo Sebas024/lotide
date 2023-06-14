@@ -1,8 +1,8 @@
-const eqArrays = require('./eqArrays');
+// it will check if 2 objects are equal and return true or false
 const eqObjects = require('./eqObjects');
-
 const assertObjectsEqual = function(actual, expected) {
 
+  //  it takes in 2 objects, prints certain message if true, another message if false
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
@@ -11,11 +11,7 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-assertObjectsEqual(shirtObject, anotherShirtObject);
-assertObjectsEqual(shirtObject, longSleeveShirtObject);
+
 
 
 module.exports = assertObjectsEqual;
